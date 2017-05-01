@@ -9,12 +9,6 @@ class CoursesPage extends React.Component{
   {
     super(props, context);
 
-    this.state = {
-      course: {title: ''}
-    };
-
-    this.onTitleChange = this.onTitleChange.bind(this);
-    this.onClickSave = this.onClickSave.bind(this);
     this.courseRow = this.courseRow.bind(this);
   }
 
@@ -43,16 +37,6 @@ class CoursesPage extends React.Component{
       <div>
         <h1>Courses</h1>
         {this.props.courses.map(this.courseRow)}
-        <h2>Add Course</h2>
-        <input type="text"
-               onChange={this.onTitleChange}
-               value={this.state.course.title}
-        />
-
-        <input type="submit"
-               value="Save"
-               onClick={this.onClickSave}
-        />
       </div>
     );
   }
