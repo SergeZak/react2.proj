@@ -21,6 +21,17 @@ class ManageCoursePage extends React.Component{
   }
 
 
+  componentWillReceiveProps(nextProps)
+  {
+    console.log('here', this.props.course.id);
+
+    if(this.props.course.id != nextProps.course.id)
+    {
+      this.setState({course: Object.assign({}, nextProps.course)})
+    }
+  }
+
+
   updateCourseState(event) {
     let field = event.target.name;
     let course = this.state.course;
