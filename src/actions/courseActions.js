@@ -13,7 +13,7 @@ export function createCourseSuccess(course)
 
 export function updateCourseSuccess(course)
 {
-  return {type: types.UPDATE_COURSE_SUCCESS, course: course}
+  return {type: types.UPDATE_COURSE_SUCCESS, course: course};
 }
 
 
@@ -42,5 +42,5 @@ export function saveCourse(course)
       .catch(error => {
         throw(error);
       });
-  }
+  };
 }
